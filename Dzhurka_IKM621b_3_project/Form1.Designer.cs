@@ -30,20 +30,20 @@ namespace Dzhurka_IKM621b_3_project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tbInput1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.bStart = new System.Windows.Forms.Button();
             this.tbInput = new System.Windows.Forms.TextBox();
             this.tClock = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // tbInput1
+            // label1
             // 
-            this.tbInput1.AutoSize = true;
-            this.tbInput1.Location = new System.Drawing.Point(310, 51);
-            this.tbInput1.Name = "tbInput1";
-            this.tbInput1.Size = new System.Drawing.Size(46, 17);
-            this.tbInput1.TabIndex = 0;
-            this.tbInput1.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(310, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // bStart
             // 
@@ -77,7 +77,7 @@ namespace Dzhurka_IKM621b_3_project
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.bStart);
-            this.Controls.Add(this.tbInput1);
+            this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -88,7 +88,7 @@ namespace Dzhurka_IKM621b_3_project
 
         #endregion
 
-        private System.Windows.Forms.Label tbInput1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bStart;
         private System.Windows.Forms.TextBox tbInput;
         private System.Windows.Forms.Timer tClock;
