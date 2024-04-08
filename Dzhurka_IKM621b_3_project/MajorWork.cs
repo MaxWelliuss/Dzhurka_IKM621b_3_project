@@ -9,6 +9,16 @@ namespace Dzhurka_IKM621b_3_project
     class MajorWork
     {
         private System.DateTime TimeBegin;
+        private string SaveFileName;// ім’я файлу для запису
+        private string OpenFileName;// ім’я файлу для читання
+        public void WriteSaveFileName(string S)// метод запису даних в об'єкт
+        {
+            this.SaveFileName = S;// запам'ятати ім’я файлу для запису
+        }
+        public void WriteOpenFileName(string S)
+        {
+            this.OpenFileName = S;// запам'ятати ім’я файлу для відкриття
+        }
         private string Data; //вхідні дані
         private string Result; // Поле результату
         public void SetTime() // метод запису часу початку роботи програми
