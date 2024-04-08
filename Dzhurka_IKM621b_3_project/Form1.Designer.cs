@@ -52,17 +52,21 @@ namespace Dzhurka_IKM621b_3_project
             this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sfdSave = new System.Windows.Forms.SaveFileDialog();
             this.ofdOpen = new System.Windows.Forms.OpenFileDialog();
+            this.dgwOpen = new System.Windows.Forms.DataGridView();
+            this.bSearch = new System.Windows.Forms.Button();
+            this.tbSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(310, 51);
+            this.label1.Location = new System.Drawing.Point(290, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "True or false";
             // 
             // bStart
             // 
@@ -79,7 +83,7 @@ namespace Dzhurka_IKM621b_3_project
             this.tbInput.Enabled = false;
             this.tbInput.Location = new System.Drawing.Point(279, 161);
             this.tbInput.Name = "tbInput";
-            this.tbInput.Size = new System.Drawing.Size(100, 22);
+            this.tbInput.Size = new System.Drawing.Size(111, 22);
             this.tbInput.TabIndex = 2;
             this.tbInput.TextChanged += new System.EventHandler(this.tbInput_TextChanged);
             this.tbInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInput_KeyPress);
@@ -114,7 +118,7 @@ namespace Dzhurka_IKM621b_3_project
             this.toolStripSeparator3,
             this.вихідToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // новийToolStripMenuItem
@@ -182,7 +186,7 @@ namespace Dzhurka_IKM621b_3_project
             this.toolStripSeparator4,
             this.проНакопичувачіToolStripMenuItem});
             this.роботаToolStripMenuItem.Name = "роботаToolStripMenuItem";
-            this.роботаToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.роботаToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
             this.роботаToolStripMenuItem.Text = "Робота";
             // 
             // пускToolStripMenuItem
@@ -210,7 +214,7 @@ namespace Dzhurka_IKM621b_3_project
             this.довідкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.проПрограмуToolStripMenuItem});
             this.довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.довідкаToolStripMenuItem.Text = "Довідка";
             // 
             // проПрограмуToolStripMenuItem
@@ -229,11 +233,41 @@ namespace Dzhurka_IKM621b_3_project
             this.ofdOpen.FileName = "openFileDialog1";
             this.ofdOpen.Filter = "рабочие файлы|*.SoM|Все файлы|*.*";
             // 
+            // dgwOpen
+            // 
+            this.dgwOpen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwOpen.Location = new System.Drawing.Point(411, 85);
+            this.dgwOpen.Name = "dgwOpen";
+            this.dgwOpen.RowHeadersWidth = 51;
+            this.dgwOpen.RowTemplate.Height = 24;
+            this.dgwOpen.Size = new System.Drawing.Size(320, 179);
+            this.dgwOpen.TabIndex = 4;
+            // 
+            // bSearch
+            // 
+            this.bSearch.Location = new System.Drawing.Point(544, 290);
+            this.bSearch.Name = "bSearch";
+            this.bSearch.Size = new System.Drawing.Size(75, 23);
+            this.bSearch.TabIndex = 5;
+            this.bSearch.Text = "Пошук";
+            this.bSearch.UseVisualStyleBackColor = true;
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Location = new System.Drawing.Point(512, 339);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(137, 22);
+            this.tbSearch.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.bSearch);
+            this.Controls.Add(this.dgwOpen);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.bStart);
             this.Controls.Add(this.label1);
@@ -246,6 +280,7 @@ namespace Dzhurka_IKM621b_3_project
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +310,9 @@ namespace Dzhurka_IKM621b_3_project
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.SaveFileDialog sfdSave;
         private System.Windows.Forms.OpenFileDialog ofdOpen;
+        private System.Windows.Forms.DataGridView dgwOpen;
+        private System.Windows.Forms.Button bSearch;
+        private System.Windows.Forms.TextBox tbSearch;
     }
 }
 
