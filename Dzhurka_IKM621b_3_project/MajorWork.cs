@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Dzhurka_IKM621b_3_project
 {
@@ -18,6 +19,13 @@ namespace Dzhurka_IKM621b_3_project
         private string Result; // Поле результату
         public bool Modify;
         private int Key;// поле ключа
+
+        public Stack myStack = new Stack();
+        public string[] myArr = new string[100];
+
+        public Queue myQueue = new Queue();
+        public string[] smyQueue = new string[100];
+
         public void WriteSaveFileName(string S)// метод запису даних в об'єкт
         {
             this.SaveFileName = S;// запам'ятати ім’я файлу для запису
