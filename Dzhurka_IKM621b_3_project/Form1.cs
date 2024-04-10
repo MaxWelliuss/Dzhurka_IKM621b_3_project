@@ -14,9 +14,29 @@ namespace Dzhurka_IKM621b_3_project
     {
         private bool Mode; // Режим дозволу / заборони введення даних
         private MajorWork MajorObject;
+        ToolStripLabel dateLabel;
+        ToolStripLabel timeLabel;
+        ToolStripLabel infoLabel;
+        Timer timer;
         public Form1()
         {
             InitializeComponent();
+            infoLabel = new ToolStripLabel();
+            infoLabel.Text = "Текущие дата и время:";
+            dateLabel = new ToolStripLabel();
+            timeLabel = new ToolStripLabel();
+            statusStrip1.Items.Add(infoLabel);
+            statusStrip1.Items.Add(dateLabel);
+            statusStrip1.Items.Add(timeLabel);
+            timer = new Timer() { Interval = 1000 };
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
+            dateLabel.Text = DateTime.Now.ToLongDateString();
+
+            timeLabel.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,6 +48,9 @@ namespace Dzhurka_IKM621b_3_project
             A.tAbout.Start();
             A.ShowDialog(); // відображення діалогового вікна About
             this.Mode = true;
+
+            toolTip1.SetToolTip(bSearch, "Натисніть на кнопку для пошуку"); 
+            toolTip1.IsBalloon = true;
         }
 
         private void tClock_Tick(object sender, EventArgs e)
@@ -105,6 +128,7 @@ namespace Dzhurka_IKM621b_3_project
         private void проПрограмуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             About A = new About();
+            A.progressBar1.Hide();
             A.ShowDialog();
         }
 

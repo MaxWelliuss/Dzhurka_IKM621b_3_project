@@ -55,14 +55,23 @@ namespace Dzhurka_IKM621b_3_project
             this.dgwOpen = new System.Windows.Forms.DataGridView();
             this.bSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(290, 66);
+            this.label1.Location = new System.Drawing.Point(324, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 0;
@@ -70,7 +79,7 @@ namespace Dzhurka_IKM621b_3_project
             // 
             // bStart
             // 
-            this.bStart.Location = new System.Drawing.Point(295, 267);
+            this.bStart.Location = new System.Drawing.Point(327, 257);
             this.bStart.Name = "bStart";
             this.bStart.Size = new System.Drawing.Size(75, 23);
             this.bStart.TabIndex = 1;
@@ -81,7 +90,7 @@ namespace Dzhurka_IKM621b_3_project
             // tbInput
             // 
             this.tbInput.Enabled = false;
-            this.tbInput.Location = new System.Drawing.Point(279, 161);
+            this.tbInput.Location = new System.Drawing.Point(311, 168);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(111, 22);
             this.tbInput.TabIndex = 2;
@@ -118,7 +127,7 @@ namespace Dzhurka_IKM621b_3_project
             this.toolStripSeparator3,
             this.вихідToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // новийToolStripMenuItem
@@ -186,7 +195,7 @@ namespace Dzhurka_IKM621b_3_project
             this.toolStripSeparator4,
             this.проНакопичувачіToolStripMenuItem});
             this.роботаToolStripMenuItem.Name = "роботаToolStripMenuItem";
-            this.роботаToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
+            this.роботаToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.роботаToolStripMenuItem.Text = "Робота";
             // 
             // пускToolStripMenuItem
@@ -214,7 +223,7 @@ namespace Dzhurka_IKM621b_3_project
             this.довідкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.проПрограмуToolStripMenuItem});
             this.довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
+            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.довідкаToolStripMenuItem.Text = "Довідка";
             // 
             // проПрограмуToolStripMenuItem
@@ -236,16 +245,16 @@ namespace Dzhurka_IKM621b_3_project
             // dgwOpen
             // 
             this.dgwOpen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwOpen.Location = new System.Drawing.Point(411, 85);
+            this.dgwOpen.Location = new System.Drawing.Point(24, 68);
             this.dgwOpen.Name = "dgwOpen";
             this.dgwOpen.RowHeadersWidth = 51;
             this.dgwOpen.RowTemplate.Height = 24;
-            this.dgwOpen.Size = new System.Drawing.Size(320, 179);
+            this.dgwOpen.Size = new System.Drawing.Size(405, 227);
             this.dgwOpen.TabIndex = 4;
             // 
             // bSearch
             // 
-            this.bSearch.Location = new System.Drawing.Point(544, 290);
+            this.bSearch.Location = new System.Drawing.Point(532, 112);
             this.bSearch.Name = "bSearch";
             this.bSearch.Size = new System.Drawing.Size(75, 23);
             this.bSearch.TabIndex = 5;
@@ -255,22 +264,73 @@ namespace Dzhurka_IKM621b_3_project
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(512, 339);
+            this.tbSearch.Location = new System.Drawing.Point(498, 212);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(137, 22);
             this.tbSearch.TabIndex = 6;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 31);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(819, 407);
+            this.tabControl1.TabIndex = 7;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.statusStrip1);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.bStart);
+            this.tabPage1.Controls.Add(this.tbInput);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(811, 378);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Введення даних";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgwOpen);
+            this.tabPage2.Controls.Add(this.bSearch);
+            this.tabPage2.Controls.Add(this.tbSearch);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(811, 407);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Робота з файлами";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 353);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(805, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statusStrip2
+            // 
+            this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 426);
+            this.statusStrip2.Name = "statusStrip2";
+            this.statusStrip2.Size = new System.Drawing.Size(800, 24);
+            this.statusStrip2.TabIndex = 8;
+            this.statusStrip2.Text = "statusStrip2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.bSearch);
-            this.Controls.Add(this.dgwOpen);
-            this.Controls.Add(this.tbInput);
-            this.Controls.Add(this.bStart);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.statusStrip2);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -281,6 +341,11 @@ namespace Dzhurka_IKM621b_3_project
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +378,12 @@ namespace Dzhurka_IKM621b_3_project
         private System.Windows.Forms.DataGridView dgwOpen;
         private System.Windows.Forms.Button bSearch;
         private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip2;
     }
 }
 
