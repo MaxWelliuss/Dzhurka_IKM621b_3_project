@@ -68,13 +68,19 @@ namespace Dzhurka_IKM621b_3_project
             this.Peek = new System.Windows.Forms.Button();
             this.Pop = new System.Windows.Forms.Button();
             this.Push = new System.Windows.Forms.Button();
-            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
-            this.Enqueue = new System.Windows.Forms.Button();
-            this.Dequeue = new System.Windows.Forms.Button();
-            this.Peek_q = new System.Windows.Forms.Button();
-            this.Queuetb = new System.Windows.Forms.TextBox();
-            this.QueueText = new System.Windows.Forms.Label();
             this.LabelQueue = new System.Windows.Forms.Label();
+            this.QueueText = new System.Windows.Forms.Label();
+            this.Queuetb = new System.Windows.Forms.TextBox();
+            this.Peek_q = new System.Windows.Forms.Button();
+            this.Dequeue = new System.Windows.Forms.Button();
+            this.Enqueue = new System.Windows.Forms.Button();
+            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
+            this.текстовіФайлиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зберегтиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зберегтиЯкToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.відкритиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -212,7 +218,9 @@ namespace Dzhurka_IKM621b_3_project
             this.роботаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.пускToolStripMenuItem,
             this.toolStripSeparator4,
-            this.проНакопичувачіToolStripMenuItem});
+            this.проНакопичувачіToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.текстовіФайлиToolStripMenuItem});
             this.роботаToolStripMenuItem.Name = "роботаToolStripMenuItem";
             this.роботаToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.роботаToolStripMenuItem.Text = "Робота";
@@ -221,19 +229,19 @@ namespace Dzhurka_IKM621b_3_project
             // 
             this.пускToolStripMenuItem.Name = "пускToolStripMenuItem";
             this.пускToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.пускToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.пускToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.пускToolStripMenuItem.Text = "Пуск";
             this.пускToolStripMenuItem.Click += new System.EventHandler(this.bStart_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(216, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
             // 
             // проНакопичувачіToolStripMenuItem
             // 
             this.проНакопичувачіToolStripMenuItem.Name = "проНакопичувачіToolStripMenuItem";
-            this.проНакопичувачіToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.проНакопичувачіToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.проНакопичувачіToolStripMenuItem.Text = "Про накопичувачі";
             this.проНакопичувачіToolStripMenuItem.Click += new System.EventHandler(this.проНакопичувачіToolStripMenuItem_Click);
             // 
@@ -273,7 +281,7 @@ namespace Dzhurka_IKM621b_3_project
             // 
             // bSearch
             // 
-            this.bSearch.Location = new System.Drawing.Point(532, 112);
+            this.bSearch.Location = new System.Drawing.Point(532, 68);
             this.bSearch.Name = "bSearch";
             this.bSearch.Size = new System.Drawing.Size(75, 23);
             this.bSearch.TabIndex = 5;
@@ -283,7 +291,7 @@ namespace Dzhurka_IKM621b_3_project
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(498, 212);
+            this.tbSearch.Location = new System.Drawing.Point(500, 106);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(137, 22);
             this.tbSearch.TabIndex = 6;
@@ -308,7 +316,7 @@ namespace Dzhurka_IKM621b_3_project
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(884, 399);
+            this.tabPage1.Size = new System.Drawing.Size(1191, 356);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Введення даних";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -316,21 +324,22 @@ namespace Dzhurka_IKM621b_3_project
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(3, 374);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 331);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(878, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1185, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.richTextBox1);
             this.tabPage2.Controls.Add(this.dgwOpen);
             this.tabPage2.Controls.Add(this.bSearch);
             this.tabPage2.Controls.Add(this.tbSearch);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(884, 399);
+            this.tabPage2.Size = new System.Drawing.Size(1191, 356);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Робота з файлами";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -437,34 +446,30 @@ namespace Dzhurka_IKM621b_3_project
             this.Push.UseVisualStyleBackColor = true;
             this.Push.Click += new System.EventHandler(this.Push_Click);
             // 
-            // statusStrip2
+            // LabelQueue
             // 
-            this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip2.Location = new System.Drawing.Point(0, 411);
-            this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Size = new System.Drawing.Size(1199, 22);
-            this.statusStrip2.TabIndex = 8;
-            this.statusStrip2.Text = "statusStrip2";
+            this.LabelQueue.AutoSize = true;
+            this.LabelQueue.Location = new System.Drawing.Point(182, 265);
+            this.LabelQueue.Name = "LabelQueue";
+            this.LabelQueue.Size = new System.Drawing.Size(86, 17);
+            this.LabelQueue.TabIndex = 5;
+            this.LabelQueue.Text = "LabelQueue";
             // 
-            // Enqueue
+            // QueueText
             // 
-            this.Enqueue.Location = new System.Drawing.Point(46, 198);
-            this.Enqueue.Name = "Enqueue";
-            this.Enqueue.Size = new System.Drawing.Size(75, 23);
-            this.Enqueue.TabIndex = 0;
-            this.Enqueue.Text = "Enqueue";
-            this.Enqueue.UseVisualStyleBackColor = true;
-            this.Enqueue.Click += new System.EventHandler(this.Enqueue_Click);
+            this.QueueText.AutoSize = true;
+            this.QueueText.Location = new System.Drawing.Point(200, 53);
+            this.QueueText.Name = "QueueText";
+            this.QueueText.Size = new System.Drawing.Size(47, 17);
+            this.QueueText.TabIndex = 4;
+            this.QueueText.Text = "Черга";
             // 
-            // Dequeue
+            // Queuetb
             // 
-            this.Dequeue.Location = new System.Drawing.Point(185, 198);
-            this.Dequeue.Name = "Dequeue";
-            this.Dequeue.Size = new System.Drawing.Size(75, 23);
-            this.Dequeue.TabIndex = 1;
-            this.Dequeue.Text = "Dequeue";
-            this.Dequeue.UseVisualStyleBackColor = true;
-            this.Dequeue.Click += new System.EventHandler(this.Dequeue_Click);
+            this.Queuetb.Location = new System.Drawing.Point(172, 152);
+            this.Queuetb.Name = "Queuetb";
+            this.Queuetb.Size = new System.Drawing.Size(100, 23);
+            this.Queuetb.TabIndex = 3;
             // 
             // Peek_q
             // 
@@ -476,30 +481,78 @@ namespace Dzhurka_IKM621b_3_project
             this.Peek_q.UseVisualStyleBackColor = true;
             this.Peek_q.Click += new System.EventHandler(this.Peek_q_Click);
             // 
-            // Queuetb
+            // Dequeue
             // 
-            this.Queuetb.Location = new System.Drawing.Point(172, 152);
-            this.Queuetb.Name = "Queuetb";
-            this.Queuetb.Size = new System.Drawing.Size(100, 23);
-            this.Queuetb.TabIndex = 3;
+            this.Dequeue.Location = new System.Drawing.Point(185, 198);
+            this.Dequeue.Name = "Dequeue";
+            this.Dequeue.Size = new System.Drawing.Size(75, 23);
+            this.Dequeue.TabIndex = 1;
+            this.Dequeue.Text = "Dequeue";
+            this.Dequeue.UseVisualStyleBackColor = true;
+            this.Dequeue.Click += new System.EventHandler(this.Dequeue_Click);
             // 
-            // QueueText
+            // Enqueue
             // 
-            this.QueueText.AutoSize = true;
-            this.QueueText.Location = new System.Drawing.Point(200, 53);
-            this.QueueText.Name = "QueueText";
-            this.QueueText.Size = new System.Drawing.Size(47, 17);
-            this.QueueText.TabIndex = 4;
-            this.QueueText.Text = "Черга";
+            this.Enqueue.Location = new System.Drawing.Point(46, 198);
+            this.Enqueue.Name = "Enqueue";
+            this.Enqueue.Size = new System.Drawing.Size(75, 23);
+            this.Enqueue.TabIndex = 0;
+            this.Enqueue.Text = "Enqueue";
+            this.Enqueue.UseVisualStyleBackColor = true;
+            this.Enqueue.Click += new System.EventHandler(this.Enqueue_Click);
             // 
-            // LabelQueue
+            // statusStrip2
             // 
-            this.LabelQueue.AutoSize = true;
-            this.LabelQueue.Location = new System.Drawing.Point(182, 265);
-            this.LabelQueue.Name = "LabelQueue";
-            this.LabelQueue.Size = new System.Drawing.Size(86, 17);
-            this.LabelQueue.TabIndex = 5;
-            this.LabelQueue.Text = "LabelQueue";
+            this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 411);
+            this.statusStrip2.Name = "statusStrip2";
+            this.statusStrip2.Size = new System.Drawing.Size(1199, 22);
+            this.statusStrip2.TabIndex = 8;
+            this.statusStrip2.Text = "statusStrip2";
+            // 
+            // текстовіФайлиToolStripMenuItem
+            // 
+            this.текстовіФайлиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.зберегтиToolStripMenuItem1,
+            this.зберегтиЯкToolStripMenuItem1,
+            this.відкритиToolStripMenuItem1});
+            this.текстовіФайлиToolStripMenuItem.Name = "текстовіФайлиToolStripMenuItem";
+            this.текстовіФайлиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.текстовіФайлиToolStripMenuItem.Text = "Текстові файли";
+            // 
+            // зберегтиToolStripMenuItem1
+            // 
+            this.зберегтиToolStripMenuItem1.Name = "зберегтиToolStripMenuItem1";
+            this.зберегтиToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.зберегтиToolStripMenuItem1.Text = "Зберегти";
+            this.зберегтиToolStripMenuItem1.Click += new System.EventHandler(this.зберегтиToolStripMenuItem1_Click);
+            // 
+            // зберегтиЯкToolStripMenuItem1
+            // 
+            this.зберегтиЯкToolStripMenuItem1.Name = "зберегтиЯкToolStripMenuItem1";
+            this.зберегтиЯкToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.зберегтиЯкToolStripMenuItem1.Text = "Зберегти як...";
+            this.зберегтиЯкToolStripMenuItem1.Click += new System.EventHandler(this.зберегтиЯкToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(458, 158);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(318, 137);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
+            // відкритиToolStripMenuItem1
+            // 
+            this.відкритиToolStripMenuItem1.Name = "відкритиToolStripMenuItem1";
+            this.відкритиToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.відкритиToolStripMenuItem1.Text = "Відкрити";
+            this.відкритиToolStripMenuItem1.Click += new System.EventHandler(this.відкритиToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -582,6 +635,12 @@ namespace Dzhurka_IKM621b_3_project
         private System.Windows.Forms.Button Peek_q;
         private System.Windows.Forms.Button Dequeue;
         private System.Windows.Forms.Button Enqueue;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem текстовіФайлиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem зберегтиToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem зберегтиЯкToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem відкритиToolStripMenuItem1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
