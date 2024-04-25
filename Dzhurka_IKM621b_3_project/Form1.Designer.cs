@@ -80,25 +80,26 @@ namespace Dzhurka_IKM621b_3_project
             this.Peek_q = new System.Windows.Forms.Button();
             this.Dequeue = new System.Windows.Forms.Button();
             this.Enqueue = new System.Windows.Forms.Button();
-            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.port = new System.IO.Ports.SerialPort(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -110,8 +111,8 @@ namespace Dzhurka_IKM621b_3_project
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -157,7 +158,7 @@ namespace Dzhurka_IKM621b_3_project
             this.довідкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1199, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1199, 30);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -374,7 +375,7 @@ namespace Dzhurka_IKM621b_3_project
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1191, 356);
+            this.tabPage1.Size = new System.Drawing.Size(1191, 555);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Введення даних";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -382,7 +383,7 @@ namespace Dzhurka_IKM621b_3_project
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(3, 331);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 530);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1185, 22);
             this.statusStrip1.TabIndex = 3;
@@ -397,7 +398,7 @@ namespace Dzhurka_IKM621b_3_project
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1191, 356);
+            this.tabPage2.Size = new System.Drawing.Size(1191, 555);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Робота з файлами";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -416,7 +417,7 @@ namespace Dzhurka_IKM621b_3_project
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1191, 356);
+            this.tabPage3.Size = new System.Drawing.Size(1191, 555);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Стек/Черга";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -432,6 +433,7 @@ namespace Dzhurka_IKM621b_3_project
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightGray;
             this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.LabelStack);
             this.splitContainer1.Panel1.Controls.Add(this.StackText);
             this.splitContainer1.Panel1.Controls.Add(this.Stacktb);
@@ -453,14 +455,14 @@ namespace Dzhurka_IKM621b_3_project
             this.splitContainer1.Panel2.Controls.Add(this.Enqueue);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(100);
-            this.splitContainer1.Size = new System.Drawing.Size(1185, 350);
+            this.splitContainer1.Size = new System.Drawing.Size(1185, 549);
             this.splitContainer1.SplitterDistance = 491;
             this.splitContainer1.TabIndex = 0;
             // 
             // LabelStack
             // 
             this.LabelStack.AutoSize = true;
-            this.LabelStack.Location = new System.Drawing.Point(148, 252);
+            this.LabelStack.Location = new System.Drawing.Point(93, 251);
             this.LabelStack.Name = "LabelStack";
             this.LabelStack.Size = new System.Drawing.Size(78, 17);
             this.LabelStack.TabIndex = 5;
@@ -567,15 +569,6 @@ namespace Dzhurka_IKM621b_3_project
             this.Enqueue.UseVisualStyleBackColor = true;
             this.Enqueue.Click += new System.EventHandler(this.Enqueue_Click);
             // 
-            // statusStrip2
-            // 
-            this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip2.Location = new System.Drawing.Point(0, 618);
-            this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Size = new System.Drawing.Size(1199, 22);
-            this.statusStrip2.TabIndex = 8;
-            this.statusStrip2.Text = "statusStrip2";
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox2);
@@ -588,25 +581,6 @@ namespace Dzhurka_IKM621b_3_project
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "ComPort";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(209, 6);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(979, 548);
-            this.listBox1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
@@ -629,98 +603,16 @@ namespace Dzhurka_IKM621b_3_project
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Налаштування порту";
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 332);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Керування потоком";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Xon/Xoff",
-            "Аппаратное",
-            "Нет"});
-            this.comboBox6.Location = new System.Drawing.Point(6, 352);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 24);
-            this.comboBox6.TabIndex = 1;
-            this.comboBox6.Text = "Нет";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 263);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Стопові біти";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "1",
-            "1.5",
-            "2",
-            "Нет"});
-            this.comboBox5.Location = new System.Drawing.Point(6, 283);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 24);
-            this.comboBox5.TabIndex = 3;
-            this.comboBox5.Text = "1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 197);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Парність";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Чет",
-            "Нечет",
-            "Нет",
-            "Маркер",
-            "Пробел"});
-            this.comboBox4.Location = new System.Drawing.Point(6, 217);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 24);
-            this.comboBox4.TabIndex = 5;
-            this.comboBox4.Text = "Нет";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Біти даних";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.comboBox3.Location = new System.Drawing.Point(6, 143);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 7;
-            this.comboBox3.Text = "8";
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(96, 417);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Старт";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -759,16 +651,108 @@ namespace Dzhurka_IKM621b_3_project
             this.comboBox2.TabIndex = 9;
             this.comboBox2.Text = "115200";
             // 
-            // button2
+            // label5
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(96, 417);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Старт";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Біти даних";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.comboBox3.Location = new System.Drawing.Point(6, 143);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 24);
+            this.comboBox3.TabIndex = 7;
+            this.comboBox3.Text = "8";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 197);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Парність";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Чет",
+            "Нечет",
+            "Нет",
+            "Маркер",
+            "Пробел"});
+            this.comboBox4.Location = new System.Drawing.Point(6, 217);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 24);
+            this.comboBox4.TabIndex = 5;
+            this.comboBox4.Text = "Нет";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 263);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Стопові біти";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "1",
+            "1.5",
+            "2",
+            "Нет"});
+            this.comboBox5.Location = new System.Drawing.Point(6, 283);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 24);
+            this.comboBox5.TabIndex = 3;
+            this.comboBox5.Text = "1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 332);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Керування потоком";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "Xon/Xoff",
+            "Аппаратное",
+            "Нет"});
+            this.comboBox6.Location = new System.Drawing.Point(6, 352);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(121, 24);
+            this.comboBox6.TabIndex = 1;
+            this.comboBox6.Text = "Нет";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
             // 
             // label7
             // 
@@ -788,9 +772,37 @@ namespace Dzhurka_IKM621b_3_project
             this.comboBox1.TabIndex = 11;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(209, 6);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(979, 548);
+            this.listBox1.TabIndex = 0;
+            // 
+            // statusStrip2
+            // 
+            this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 618);
+            this.statusStrip2.Name = "statusStrip2";
+            this.statusStrip2.Size = new System.Drawing.Size(1199, 22);
+            this.statusStrip2.TabIndex = 8;
+            this.statusStrip2.Text = "statusStrip2";
+            // 
             // port
             // 
             this.port.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.port_DataReceived);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(151, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Sort";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -822,10 +834,10 @@ namespace Dzhurka_IKM621b_3_project
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -902,6 +914,7 @@ namespace Dzhurka_IKM621b_3_project
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.IO.Ports.SerialPort port;
+        private System.Windows.Forms.Button button1;
     }
 }
 

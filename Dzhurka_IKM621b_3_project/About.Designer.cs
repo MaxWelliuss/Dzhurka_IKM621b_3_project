@@ -30,6 +30,7 @@ namespace Dzhurka_IKM621b_3_project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tAbout = new System.Windows.Forms.Timer(this.components);
@@ -50,12 +51,11 @@ namespace Dzhurka_IKM621b_3_project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(296, 99);
+            this.label1.Location = new System.Drawing.Point(250, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 102);
+            this.label1.Size = new System.Drawing.Size(316, 136);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Розробив\r\nСтудент групи ІКМ-621б\r\nДжурка Максим Володимирович\r\n\r\nТекст завдання:\r" +
-    "\nТекст";
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // tAbout
             // 

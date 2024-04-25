@@ -17,6 +17,7 @@ namespace Dzhurka_IKM621b_3_project
         private bool Mode; // Режим дозволу / заборони введення даних
         private SaveFileDialog sf;
         private MajorWork MajorObject;
+        Stack<int> allNumbers = new Stack<int>();
         ToolStripLabel dateLabel;
         ToolStripLabel timeLabel;
         ToolStripLabel infoLabel;
@@ -220,6 +221,11 @@ namespace Dzhurka_IKM621b_3_project
 
         private void Push_Click(object sender, EventArgs e)
         {
+            if (allNumbers.Count >= 30)
+            {
+                MessageBox.Show("Ви досягли максимальної кількості введених чисел (30).", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             MajorObject.myStack.Push(Stacktb.Text);
 
             MajorObject.myArr[MajorObject.myArr.Length - MajorObject.myStack.Count] = Stacktb.Text;
@@ -229,6 +235,7 @@ namespace Dzhurka_IKM621b_3_project
             {
                 if (MajorObject.myArr[i] != null)
                 {
+                    LabelStack.TextAlign = ContentAlignment.BottomRight;
                     LabelStack.Text += MajorObject.myArr[i] + (char)13;
                 }
                 else
@@ -237,6 +244,19 @@ namespace Dzhurka_IKM621b_3_project
                     continue;
                 }
             }
+            // Додаємо введені користувачем числа до стеку
+            string[] inputNumbers = Stacktb.Text.Split(' ');
+
+            foreach (string inputNum in inputNumbers)
+            {
+                if (int.TryParse(inputNum, out int num))
+                {
+                    allNumbers.Push(num);
+                }
+            }
+
+            // Очищаємо поле для введення
+            Stacktb.Clear();
         }
 
         private void Peek_Click(object sender, EventArgs e)
@@ -482,6 +502,30 @@ namespace Dzhurka_IKM621b_3_project
             {
                 SetText(InputData);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            // Очищаємо вміст LabelStack перед виведенням нового результату
+            LabelStack.Text = "";
+
+            // Створюємо стек для зберігання чисел, які діляться на 3
+            Stack<int> numbersDivisibleBy3 = new Stack<int>(allNumbers.Where(num => num % 3 == 0));
+
+            // Впорядковуємо числа за зростанням
+            List<int> sortedNumbers = numbersDivisibleBy3.ToList();
+            sortedNumbers.Sort();
+
+            // Формуємо рядок для виведення у LabelStack
+            string result = "Числа, які діляться на 3 та впорядковані за зростанням:\n";
+            foreach (int number in sortedNumbers)
+            {
+                result += number.ToString() + "\n";
+            }
+
+            // Виводимо результат у LabelStack
+            LabelStack.TextAlign = ContentAlignment.MiddleCenter;
+            LabelStack.Text = result;
         }
     }
 }
